@@ -1,0 +1,8 @@
+Significance of Background Keyword in Cucumber?
+
+This is a keyword used in feature file.Background keyword is used to write the steps which are common for every scenario.
+So, it will run before every scenario.For Example, if we have two scenarios like one is adding to cart and another is checkout,
+for both the scenarios we have to login which is common.So, we write login scenario with the help of background keyword it will first login to our account
+and search an item then for second scenario also it will first run the background keyword then it will run checkout scenario.
+
+

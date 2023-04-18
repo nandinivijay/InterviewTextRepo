@@ -1,0 +1,29 @@
+Q.5 Can We Override A Static Method Or a Main Method?
+No, we cannot override static methods because method overriding is based on dynamic binding at runtime and
+the static methods are bonded using static binding at compile time. 
+So, we cannot override static methods.
+The main method in Java is a special method that serves as the entry point of a Java program. It has a specific signature that must be followed, which is:
+public static void main(String[] args)
+{}
+This means that the method must be:
+
+public: it can be accessed from anywhere.
+static: it can be called without creating an instance of the class.
+void: it does not return any value.
+main: the name of the method, which is a convention in Java.
+String[] args: an array of strings that can be used to pass arguments to the program.
+Since the main method is already defined in the java.lang.Object class and it is a static method, you cannot override it in a subclass. However, you can define a main method in a subclass, but it will not serve as the entry point for the program. Instead, it will be just like any other method in the subclass.
+
+
+Q.Does Java Allow You To Overrie A Private Or Static Method?
+No, Java does not allow you to override a private or static method.
+In Java, a private method is a method that can only be accessed within the same class where it is defined. Since it is not visible outside the class, it cannot be overridden by a subclass.
+A static method is a method that belongs to a class and can be called without creating an instance of the class. Since it is not tied to an object's state, it cannot be overridden by a subclass.
+Therefore, if you try to override a private or static method in a subclass, you will get a compile-time error in Java.
+
+Q.Can We Use Multiple Main Methods In Multiple Classes?
+Yes, you can use multiple main methods in multiple classes in Java.
+The main method in Java is a special method that serves as the entry point for a Java program. It is the method that is called when you run the program. Since you can have multiple classes in a Java program, you can also have multiple main methods, one for each class.
+When you run the program, you specify the class that contains the main method that you want to run. For example, if you have two classes, ClassA and ClassB, each with a main method 
+This will run the main method of the specified class and execute the code inside that method.
+It is important to note that only one main method can be executed at a time. When you run the program, you must specify which main method you want to run, and only that main method will be executed. 

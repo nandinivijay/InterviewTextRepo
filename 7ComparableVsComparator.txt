@@ -1,0 +1,13 @@
+Q.What Is the Difference between Comparable And Comparator?
+
+In Java, Comparable and Comparator are two interfaces that are used to define the natural ordering and custom ordering of objects, respectively. Both interfaces are used for sorting objects, but they have some differences in their usage and implementation.
+
+Comparable: It is a functional interface that is used to define the natural ordering of objects. When a class implements the Comparable interface, it provides an implementation of the compareTo() method, which compares the object with another object and returns an integer value indicating the order. The compareTo() method should be implemented in such a way that it defines the total order of the objects, meaning it should provide a consistent comparison result for all objects in all possible scenarios. Examples of classes that implement Comparable in Java are String, Integer, Double, etc.
+
+Comparator: It is also a functional interface that is used to define custom ordering of objects. Unlike Comparable, which provides a natural ordering for objects, Comparator allows you to define multiple ways of comparing objects based on different criteria. A class can implement Comparator to provide multiple custom sorting orders for its objects. The Comparator interface has a method called compare() which takes two objects as input and returns an integer value indicating the order. Examples of classes that implement Comparator in Java are Collections class, where you can find various predefined comparators such as Comparator.naturalOrder(), Comparator.reverseOrder(), etc.
+
+In summary, Comparable is used to define the natural ordering of objects, while Comparator is used to define custom ordering of objects based on different criteria. Comparable is typically used when you want to define a single natural ordering for objects, while Comparator is used when you want to provide multiple custom sorting orders or when you don't have control over the implementation of the objects that need to be sorted.
+
+
+
+

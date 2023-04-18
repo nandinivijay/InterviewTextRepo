@@ -1,0 +1,32 @@
+Q2.Why Is Java Considered Dynamic?
+
+Java is considered dynamic because it has several features that allow for dynamic behavior at runtime. Here are a few reasons :
+
+1.Automatic Memory Management:---> Java has automatic memory management, which means that the JVM (Java Virtual Machine) manages memory allocation and deallocation dynamically during runtime. This allows for dynamic allocation of memory as needed by the program.
+
+2.Dynamic Class Loading:---> Java allows classes to be loaded dynamically at runtime. This means that classes can be loaded and used only when they are needed, instead of having to load all the classes at the beginning of the program.
+
+3.Reflection:---> Java supports reflection, which allows programs to examine and modify the structure and behavior of classes and objects dynamically at runtime. This means that a program can change its behavior based on runtime information.
+
+4.Dynamic Method Dispatch:--> Java supports dynamic method dispatch, which allows the JVM to determine at runtime which implementation of a method to invoke based on the actual type of the object the method is being called on. This means that a program can have polymorphic behavior at runtime.
+
+Overall, these features of Java make it a dynamic programming language, allowing programs to adapt to changing conditions and requirements at runtime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

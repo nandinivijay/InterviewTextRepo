@@ -1,0 +1,47 @@
+Q.6 What Is The Method Of Hiding?
+
+In Java, the method of hiding is a way to use a method with the same name as a method in a superclass, but with a different implementation in a subclass. This is done by using the static keyword to create a new method with the same name as the method in the superclass.
+When a method is hidden in a subclass, it means that the method in the superclass is no longer accessible from the subclass. Instead, the subclass will use its own implementation of the method.
+For example, let's say you have a superclass called Animal with a method called makeSound(). You also have a subclass called Cat that extends Animal. In Cat, you can create a new method called makeSound() that uses the static keyword to hide the makeSound() method in Animal.
+public class Animal {
+    public void makeSound() {
+        System.out.println("Animal is making a sound");
+    }
+}
+
+public class Cat extends Animal {
+    public static void makeSound() {
+        System.out.println("Meow");
+    }
+Cat cat = new Cat();
+cat.makeSound(); // prints "Meow"
+
+}
+
+It is important to note that method hiding should be used with caution as it can lead to confusion and unexpected behavior.
+ It is generally recommended to use method overriding instead, where you create a new implementation of a method in a subclass without using the static keyword.
+
+
+
+
+
+Q.Difference between Method Of Hiding and  Method Of overriding .
+
+Method Hiding:
+Method hiding is achieved by using the static keyword in a subclass to create a new method with the same name as a method in the superclass.
+The method in the superclass is no longer accessible from the subclass, and the subclass will use its own implementation of the method.
+Method hiding does not involve polymorphism as the method called depends solely on the compile-time type of the reference variable, not the actual type of the object at runtime.
+Method hiding is determined at compile-time, and the method to be called is based on the type of the reference variable.
+Example: public static void methodName() { ... }
+Method Overriding:
+Method overriding is achieved by creating a new implementation of a method in a subclass that has the same method signature (i.e., same name, return type, and parameter types) as a method in the superclass.
+The method in the superclass can be accessed and overridden by the subclass.
+Method overriding involves polymorphism, as the method called depends on the actual type of the object at runtime.
+Method overriding is determined at runtime, and the method to be called is based on the type of the actual object, not the type of the reference variable.
+Example: public void methodName() { ... }
+In summary, method hiding uses the static keyword and is determined at compile-time based on the reference variable type, while method overriding involves polymorphism, is determined at runtime based on the actual object type, and does not use the static keyword. It is generally recommended to use method overriding for achieving polymorphism in Java.
+
+
+
+
+Regenerate response

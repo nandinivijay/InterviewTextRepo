@@ -1,0 +1,24 @@
+Q.Let’s Say There Is A Method That Throws Nullpointerexception In The Superclass. Can We Override It With A Method That Throws Runtimeexception?
+
+Yes, you can override a method that throws NullPointerException in the superclass with a method that throws RuntimeException in the subclass.
+
+This is because RuntimeException is an unchecked exception, which means that it does not need to be declared in the method signature or caught by calling code. Therefore, a method in a subclass can throw a RuntimeException even if the corresponding method in the superclass throws a checked exception such as NullPointerException.
+
+Here's an example to illustrate this:
+
+class Superclass {
+    public void method() throws NullPointerException {
+        // Some code that may throw NullPointerException
+    }
+}
+
+class Subclass extends Superclass {
+    @Override
+    public void method() throws RuntimeException {
+        // Some code that throws RuntimeException
+    }
+}
+
+In this example, the Superclass defines a method method() that throws NullPointerException. The Subclass overrides this method and throws RuntimeException instead. Since RuntimeException is an unchecked exception, it does not need to be declared in the method signature.
+
+Note that if a calling code expects the NullPointerException to be thrown, then throwing a RuntimeException instead can potentially cause unexpected behavior. Therefore, it is important to ensure that the method contract is clearly documented and understood by any calling code.

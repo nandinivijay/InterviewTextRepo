@@ -1,0 +1,80 @@
+Q. Define The Java’s Wora Nature.
+Java's "WORA" nature stands for "Write Once, Run Anywhere." It is a feature of the Java programming language and the Java Virtual Machine (JVM) that allows Java programs to be compiled once and run on any platform that supports Java without any modification.
+This is achieved through the use of the JVM, which provides a layer of abstraction between the Java program and the underlying hardware and operating system. When a Java program is compiled, it is compiled into bytecode, which is a platform-independent representation of the program. The JVM then translates this bytecode into machine code that can be executed on the host platform.
+This WORA nature of Java has made it a popular choice for developing cross-platform applications, such as web applications and mobile apps, that need to run on a variety of different devices and platforms.
+
+
+Q.Why Is Java Known As The Platform Independent Programming Language?
+Java is known as a platform-independent programming language because it can run on any platform that has a Java Virtual Machine (JVM) installed.
+Here are a few reasons why Java is platform-independent:
+1.Compiled into bytecode: Java programs are compiled into bytecode, which is an intermediate language that is platform-independent. The bytecode can be executed on any platform that has a JVM installed.
+2.JVM as an interpreter: The JVM acts as an interpreter between the Java program and the underlying operating system, providing a layer of abstraction that shields the program from platform-specific details.
+3.Standardized API: Java provides a standardized API (Application Programming Interface), which allows Java programs to interact with the underlying operating system in a platform-independent way.
+4.Portability: Java programs are highly portable, meaning that they can be moved from one platform to another without requiring any changes to the code.
+
+Q.How Can You Determine If Jvm Is 32-bit Or 64-bit From Java Program?
+You can determine if the JVM is 32-bit or 64-bit from a Java program by using the System.getProperty() method to retrieve the value of the os.arch property.
+Here's an example code snippet that demonstrates how to determine if the JVM is 32-bit or 64-bit:
+
+public class JvmBitChecker {
+    public static void main(String[] args) {
+        String arch = System.getProperty("os.arch");
+        System.out.println("JVM architecture: " + arch);
+        if (arch.contains("64")) {
+            System.out.println("JVM is 64-bit");
+        } else {
+            System.out.println("JVM is 32-bit");
+        }
+    }
+}
+
+
+
+
+Q.What Is The Right Data Type To Represent Money (Like Dollar/pound) In Java?
+The right data type to represent money in Java is the BigDecimal class.
+BigDecimal is a class in Java that provides an arbitrary-precision decimal representation of a number, which is necessary for representing money accurately. It can handle very large or very small numbers, and provides precise decimal point control, which is important for monetary calculations.
+For Example: 
+import java.math.BigDecimal;
+
+public class MoneyExample {
+    public static void main(String[] args) {
+        BigDecimal amount = new BigDecimal("10.50"); // represents $10.50
+        System.out.println("Amount: $" + amount);
+    }
+}
+
+
+
+Q.How Can We Find The Memory Usage Of Jvm From Java Code?
+You can find the memory usage of the JVM (Java Virtual Machine) from Java code by using the Runtime class in Java. 
+Here's a simple Way:
+public class  UseMemoryOfJvm {
+    public static void main(String[] args) {
+
+       Runtime runtime = Runtime.getRuntime(); //Create a Runtime object: First, you need to create a Runtime object, which allows you to interact with the JVM.
+       long totalMemory = runtime.totalMemory();// Call the totalMemory(): This method returns the total amount of memory that the JVM has allocated for the application.
+        long freeMemory = runtime.freeMemory();  // Call the freeMemory(): This method returns the amount of free memory in the JVM, which is the memory that is currently not being used by the application.
+        long usedMemory = totalMemory - freeMemory;  //calculate the amount of memory that is currently being used by the application, you can subtract the free memory from the total memory.
+         System.out.println("Total memory: " + totalMemory);
+         System.out.println("Free memory: " + freeMemory);
+         System.out.println("Used memory: " + usedMemory);
+          }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

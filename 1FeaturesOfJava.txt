@@ -1,0 +1,7 @@
+Q1.List Any Five Features Of Java.
+1.Object orianted language:-------> java is designed to be an object oriented programming language with features such as Abstraction,encapsulation,inheritance and polymorphism.
+2.Platform independent:---->Java is platform independent laguage, java code can be compiled on any platform and then executed on amy other platform that supports java witout modification.
+3.Automatic Memory Management:---> Java uses a garbage collector to automatically manage memory allocation and deallocation ,which helps to prevent memory leaks.
+4.Standard Library: Java comes with a comprehensive standard library that provides developers with a wide range of functionality, including networking, input/output, and database access.
+5.Security:---> Java provides a secure runtime environment with features such as bytecode verification, which helps to prevent malicious code from being executed.
+6.Interoperability: Java provides a rich set of APIs that allow developers to easily integrate Java applications with other systems and technologies. 
